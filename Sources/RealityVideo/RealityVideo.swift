@@ -65,7 +65,7 @@ open class RealityView: ARView {
     }
     
     private func setupAssetWriter(width: Int, height: Int) {
-        writer = try! AVAssetWriter(outputURL: settings.outputURL, fileType: .mov)
+        writer = try! AVAssetWriter(outputURL: settings.outputURL, fileType: .mp4)
         print(writer.status.rawValue)
         let settings: [String: Any] = [
             AVVideoCodecKey: AVVideoCodecType.h264,
