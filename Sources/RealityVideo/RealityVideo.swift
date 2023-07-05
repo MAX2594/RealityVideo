@@ -131,7 +131,7 @@ open class RealityView: ARView {
 }
 
 extension RealityView: ARSessionDelegate {
-    public func session(_ session: ARSession, didUpdate frame: ARFrame) {
+    open func session(_ session: ARSession, didUpdate frame: ARFrame) {
         frameCount += 1
         let pixelBuffer = frame.capturedImage
         assetWriterWidth = CVPixelBufferGetWidth(pixelBuffer)
