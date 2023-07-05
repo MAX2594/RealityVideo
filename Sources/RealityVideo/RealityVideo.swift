@@ -10,7 +10,7 @@ public enum RecordingState: String, CaseIterable {
     case end
 }
 
-public class RealityView: ARView {
+open class RealityView: ARView {
     public var arView: ARView { return self }
     public var settings: VideoSettings = RealityVideoSettings.standard
     
@@ -43,7 +43,7 @@ public class RealityView: ARView {
         session.delegate = self
     }
     
-    @MainActor required dynamic init?(coder decoder: NSCoder) {
+    @MainActor required dynamic public init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
